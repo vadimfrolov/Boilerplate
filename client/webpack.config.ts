@@ -6,7 +6,6 @@ import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import Dotenv from 'dotenv-webpack';
 
-
 const webpackConfig = (): Configuration => ({
   entry: './src/index.tsx',
   ...(process.env.production || !process.env.development ? {} : {devtool: 'eval-source-map'}),
