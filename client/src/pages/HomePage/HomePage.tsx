@@ -3,7 +3,7 @@ import React from 'react';
 const Homepage = () => {
   return (
     <>
-      <div>welcom to boilerplate</div>
+      <div className="title">welcome to boilerplate</div>
     </>
   );
 };
