@@ -4,7 +4,6 @@
   "description": "A simple boilerplate",
   "main": "index.js",
   "scripts": {
-    "prepare": "husky install",
     "dev": "webpack-cli serve --mode=development --env development --open --hot",
     "start": "webpack serve --mode=production --env production",
     "build": "webpack --mode=production --env production --progress",

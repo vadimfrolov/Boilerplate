@@ -3,9 +3,9 @@ import {Configuration, DefinePlugin} from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import Dotenv from 'dotenv-webpack';
 
-const Dotenv = require('dotenv-webpack');
 
 const webpackConfig = (): Configuration => ({
   entry: './src/index.tsx',
@@ -47,20 +47,24 @@ const webpackConfig = (): Configuration => ({
   performance: {
     hints: false,
   },
+
   devServer: {
     port: 3000,
     open: true,
     historyApiFallback: true,
   },
+
   plugins: [
     new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: './public/index.html',
     }),
+
     new Dotenv({
       path: './.env',
       safe: true,
     }),
+
     new ForkTsCheckerWebpackPlugin({
       eslint: {
         files: './src/**/*.{ts,tsx,js,jsx}',
