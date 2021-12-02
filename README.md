@@ -6,7 +6,7 @@ I've made this boilerplate from scratch to use it for new projects
 
 React, Typescript, Webpack, Prettier, Eslint, Docker, Nginx
 
-you can click on button "Use this template" to start new project with this template
+You can click on button "Use this template" to start new project with this template
 
 ### Installation
 
