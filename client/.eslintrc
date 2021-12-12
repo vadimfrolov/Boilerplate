@@ -6,17 +6,18 @@
   },
   "extends": [
     "plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended",
+    "eslint:recommended",
     "plugin:react/recommended",
     "plugin:prettier/recommended"
   ],
   "parserOptions": {
-    "project": [
-      "tsconfig.json"
-    ],
+    "project": "tsconfig.json",
     "ecmaVersion": 2020,
     "sourceType": "module",
     "ecmaFeatures": {
-      "jsx": true
+      "jsx": true,
+      "tsx": true
     }
   },
     "plugins": [

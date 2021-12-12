@@ -1,10 +1,9 @@
 import path from 'path';
-import {Configuration, DefinePlugin} from 'webpack';
+import {Configuration} from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import Dotenv from 'dotenv-webpack';
 
 const webpackConfig = (): Configuration => ({
   entry: './src/index.tsx',
@@ -47,21 +46,10 @@ const webpackConfig = (): Configuration => ({
     hints: false,
   },
 
-  devServer: {
-    port: 3000,
-    open: true,
-    historyApiFallback: true,
-  },
-
   plugins: [
     new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: './public/index.html',
-    }),
-
-    new Dotenv({
-      path: './.env',
-      safe: true,
     }),
 
     new ForkTsCheckerWebpackPlugin({
